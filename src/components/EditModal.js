@@ -15,7 +15,7 @@ const EditModal = ({ show, handleClose, handleSave, initialValue }) => {
         <Modal.Title>Edit Water Intake</Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <Form onSubmit={handleSubmit}>
+        <Form>
           <Form.Group controlId="formQuantity">
             <Form.Label>Quantity (ml)</Form.Label>
             <Form.Control
@@ -25,11 +25,16 @@ const EditModal = ({ show, handleClose, handleSave, initialValue }) => {
               required
             />
           </Form.Group>
-          <Button variant="primary" type="submit">
-            Save Changes
-          </Button>
         </Form>
       </Modal.Body>
+      <Modal.Footer>
+        <Button variant="primary" onClick={handleSubmit}>
+            Save
+        </Button>
+        <Button variant="secondary" onClick={handleClose}>
+          Cancel
+        </Button>
+      </Modal.Footer>
     </Modal>
   );
 };

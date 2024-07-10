@@ -9,11 +9,11 @@ const ConfirmModal = ({ show, handleClose, handleConfirm }) => {
       </Modal.Header>
       <Modal.Body>Are you sure you want to delete this entry?</Modal.Body>
       <Modal.Footer>
-        <Button variant="secondary" onClick={handleClose}>
-          No
-        </Button>
         <Button variant="danger" onClick={handleConfirm}>
           Yes
+        </Button>
+        <Button variant="secondary" onClick={handleClose}>
+          No
         </Button>
       </Modal.Footer>
     </Modal>
