@@ -43,7 +43,6 @@ const AddWaterIntake = () => {
         <h1 className='d-flex justify-content-center pt-5'>Add Water Intake</h1>
         <form onSubmit={handleAddWaterIntake}>
           <div className='d-flex justify-content-center pt-5'>
-            {/* <label>Quantity (ml):</label> */}
             <div className='row'>
               <div className='col-12'>
               <input class="form-control mb-4 bg-light border-3" placeholder='Quantity (ml)' type="number" value={quantity} onChange={(e) => setQuantity(e.target.value)} required />

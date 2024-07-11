@@ -24,7 +24,9 @@ const ViewWaterIntake = () => {
       navigate('/login');
     } else {
       const allIntakes = JSON.parse(localStorage.getItem('waterIntakes')) || [];
-      const userIntakes = allIntakes.filter(entry => entry.username === currentUser.username);
+      const userIntakes = allIntakes
+        .filter(entry => entry.username === currentUser.username)
+        .sort((a, b) => new Date(b.date) - new Date(a.date) || new Date('1970/01/01 ' + b.time) - new Date('1970/01/01 ' + a.time));
       setWaterIntakes(userIntakes);
     }
   }, [currentUser, navigate]);
