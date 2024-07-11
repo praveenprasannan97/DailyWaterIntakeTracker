@@ -26,7 +26,7 @@ const ViewWaterIntake = () => {
       const allIntakes = JSON.parse(localStorage.getItem('waterIntakes')) || [];
       const userIntakes = allIntakes
         .filter(entry => entry.username === currentUser.username)
-        .sort((a, b) => new Date(b.date) - new Date(a.date) || new Date('1970/01/01 ' + b.time) - new Date('1970/01/01 ' + a.time));
+        .sort((a, b) => new Date(b.date) - new Date(a.date));
       setWaterIntakes(userIntakes);
     }
   }, [currentUser, navigate]);
@@ -132,10 +132,10 @@ const ViewWaterIntake = () => {
         <div className='container bg-white rounded'>
           <h3 className='d-flex justify-content-center pt-3'>Calculate Difference Between Dates</h3>
           <div className='d-flex justify-content-center pb-3'>
-            <label>Date 1:<input type="date" value={date1} onChange={(e) => setDate1(e.target.value)} /></label>
-            <label>Date 2:<input type="date" value={date2} onChange={(e) => setDate2(e.target.value)} /></label>
-            <button className='btn btn-sm btn-outline-primary' onClick={calculateDifference}>Calculate</button>
-            {difference !== null && <p>Difference: {difference} ml</p>}
+            <label className='mx-2'>Date 1:<input className='mx-2' type="date" value={date1} onChange={(e) => setDate1(e.target.value)} /></label>
+            <label className='mx-2'>Date 2:<input className='mx-2' type="date" value={date2} onChange={(e) => setDate2(e.target.value)} /></label>
+            <button className='btn btn-sm btn-outline-primary mx-2' onClick={calculateDifference}>Calculate</button>
+            {difference !== null && <p className='mx-2'>Difference: {difference} ml</p>}
           </div>
         </div>
       </div>
