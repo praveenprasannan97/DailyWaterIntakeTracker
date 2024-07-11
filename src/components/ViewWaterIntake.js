@@ -96,7 +96,7 @@ const ViewWaterIntake = () => {
   };
 
   return (
-    <div>
+    <div className='vh-100 background'>
       <div><Navbar/></div>
       <div className='container'>
         <h1 className='d-flex justify-content-center mt-5 mb-5'>Water Intake List</h1>
@@ -127,9 +127,9 @@ const ViewWaterIntake = () => {
           ))}
         </div>
         <br></br>
-        <div>
-          <h3 className='d-flex justify-content-center'>Calculate Difference Between Dates</h3>
-          <div className='d-flex justify-content-center'>
+        <div className='container bg-white rounded'>
+          <h3 className='d-flex justify-content-center pt-3'>Calculate Difference Between Dates</h3>
+          <div className='d-flex justify-content-center pb-3'>
             <label>Date 1:<input type="date" value={date1} onChange={(e) => setDate1(e.target.value)} /></label>
             <label>Date 2:<input type="date" value={date2} onChange={(e) => setDate2(e.target.value)} /></label>
             <button className='btn btn-sm btn-outline-primary' onClick={calculateDifference}>Calculate</button>

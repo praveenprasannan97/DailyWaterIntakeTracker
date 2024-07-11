@@ -36,3 +36,23 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.background {
+  background-image: url('./assets/homebg.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 1;
+  height: 100%;
+  width: 100%;
+}
+
+.custom-height {
+  height: 31vh; /* or any desired height */
+}

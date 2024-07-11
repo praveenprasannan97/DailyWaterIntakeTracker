@@ -37,20 +37,21 @@ const AddWaterIntake = () => {
   };
 
   return (
-    <div>
+    <div className='vh-100 background'>
       <div><Navbar/></div>
-      <div>
+      <div className='container'>
         <h1 className='d-flex justify-content-center pt-5'>Add Water Intake</h1>
         <form onSubmit={handleAddWaterIntake}>
           <div className='d-flex justify-content-center pt-5'>
-            <label>Quantity (ml):</label>
-            <input
-              type="number"
-              value={quantity}
-              onChange={(e) => setQuantity(e.target.value)}
-              required
-            />
-            <button className='btn btn-sm btn-outline-primary' type="submit">Add</button>
+            {/* <label>Quantity (ml):</label> */}
+            <div className='row'>
+              <div className='col-12'>
+              <input class="form-control mb-4 bg-light border-3" placeholder='Quantity (ml)' type="number" value={quantity} onChange={(e) => setQuantity(e.target.value)} required />
+              </div>
+              <div className='col-md-6'>
+              <button className='btn btn-outline-primary' type="submit">Add</button>
+              </div>
+            </div>
           </div>
         </form>
       </div>

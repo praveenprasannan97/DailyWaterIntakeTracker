@@ -19,33 +19,25 @@ const Login = () => {
   };
 
   return (
-    <div className='row d-flex vh-100 align-items-center justify-content-center'>
-      <div className='col-10'>
-        <div className="container">
-          <h1 className='d-flex justify-content-center'>Login</h1>
-          <form onSubmit={handleLogin}>
-            <div className='d-flex justify-content-center pt-5'>
-              <div>
-                <label>UserName:</label>
-                <input
-                  type="text"
-                  value={username}
-                  onChange={(e) => setUsername(e.target.value)}
-                  required
-                />
+    <div className='background'>
+      <div className='row d-flex vh-100 align-items-center justify-content-center'>
+        <div className='col-4'>
+          <div className="container bg-white rounded custom-height">
+            <h1 className='d-flex justify-content-center pt-3'>Login</h1>
+            <form onSubmit={handleLogin}>
+              <div className='d-flex justify-content-center pt-4 pb-4'>
+                <div className='row'>
+                  <div>
+                    <input class="form-control mb-4 bg-light border-3" placeholder="User Name" type="text" value={username} onChange={(e) => setUsername(e.target.value)} required />
+                  </div>
+                  <div>
+                    <input class="form-control mb-4 bg-light border-3" placeholder="Password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+                  </div>
+                  <button className="btn btn-outline-primary" type="submit">Login</button>
+                </div>
               </div>
-              <div>
-                <label>Password :</label>
-                <input
-                  type="password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  required
-                />
-              </div>
-              <button className="btn btn-sm btn-outline-primary" type="submit">Login</button>
-            </div>
-          </form>
+            </form>
+          </div>
         </div>
       </div>
     </div>
